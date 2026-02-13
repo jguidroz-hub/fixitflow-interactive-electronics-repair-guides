@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Guides/createItem {
+interface GuidesCreateItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Guides/createItem {
   [key: string]: any;
 }
 
-export default function Guides/createPage() {
-  const [items, setItems] = useState<Guides/createItem[]>([]);
+export default function GuidesCreatePage
+  const [items, setItems] = useState<GuidesCreateItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function Guides/createPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/guides/create/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiGuidesCreate/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 

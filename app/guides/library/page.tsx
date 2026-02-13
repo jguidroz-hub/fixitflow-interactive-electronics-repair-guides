@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Guides/libraryItem {
+interface GuidesLibraryItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Guides/libraryItem {
   [key: string]: any;
 }
 
-export default function Guides/libraryPage() {
-  const [items, setItems] = useState<Guides/libraryItem[]>([]);
+export default function GuidesLibraryPage
+  const [items, setItems] = useState<GuidesLibraryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function Guides/libraryPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/guides/library/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiGuidesLibrary/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
