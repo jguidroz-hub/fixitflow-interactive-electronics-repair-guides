@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface GuidesLibraryItem
+interface GuidesLibraryItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,7 +10,7 @@ interface GuidesLibraryItem
   [key: string]: any;
 }
 
-export default function GuidesLibraryPage
+export default function GuidesLibraryPage() {
   const [items, setItems] = useState<GuidesLibraryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);

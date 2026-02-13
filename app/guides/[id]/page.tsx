@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface GuidesDetailItem
+interface GuidesDetailItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,7 +10,7 @@ interface GuidesDetailItem
   [key: string]: any;
 }
 
-export default function GuidesDetailPage
+export default function GuidesDetailPage() {
   const [items, setItems] = useState<GuidesDetailItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
