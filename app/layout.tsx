@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'FixitFlow - Interactive Electronics Repair Guides',
-  description: 'Value Proposition: Provides structured, interactive, step-by-step guidance for complex electronics repair and modification, preventing mistakes and ensuring optimal performance for hobbyists and small repair businesses.',
+  description: 'Value Proposition: Provides structured, interactive, step-by-step guidance for complex electronics r',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
