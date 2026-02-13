@@ -42,7 +42,7 @@ export const guideInteractions = pgTable('guide_interactions', {
   id: text('id').primaryKey(),
   userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
   repairGuideId: text('repair_guide_id').notNull().references(() => repairGuides.id, { onDelete: 'cascade' }),
-  progress: text('progress').notNull().default(0),
+  progress: text('progress').notNull().default('0'),
   completed: boolean('completed').notNull().default(false),
   notes: text('notes'),
   createdAt: timestamp('created_at').notNull(),
